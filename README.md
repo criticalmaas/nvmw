@@ -1,6 +1,6 @@
 Node Version Manager for Windows
 ================================
-forked from the original nvmw since it seems like pull requests were not being honored - [nvmw](//github.com/hakobera/nvmw "hakobera/nvmw") is a simple Node Version Manager for Windows. I've not tested my changes against io.js but in reality I'd say it is a non-issue now.
+This is a simple fork from the original [nvmw](//github.com/hakobera/nvmw "hakobera/nvmw") since it seems like pull requests were not being honored - nvmw is a simple Node Version Manager for Windows. I've not tested my changes against io.js but in reality I'd say it is a non-issue now.
 
 Prerequisites
 -------------
