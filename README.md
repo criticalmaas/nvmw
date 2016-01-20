@@ -72,10 +72,13 @@ nvmw install iojs-v1.0.2
 FAQ
 ---
 
-### Q. Node.exe download faild caused 'Input Error: There is no script engine for file extension ".js"'
+### Q: Node.exe download faild caused 'Input Error: There is no script engine for file extension ".js"'
 
 Maybe you associated ".js" file to another app, not JScript engine. To fix, see [here](http://www.winhelponline.com/articles/230/1/Error-There-is-no-script-engine-for-file-extension-when-running-js-files.html)
 
+### Q: I can install the correct node version but npm faile dto install.
+
+Try rerunning the installer. The temp node version directory is removed each time upon failure but for some reason occassionally a content-length mismatch happens and npm fails to install. Past that, I'm not sure.
 LICENSE
 -------
 (The MIT License)
