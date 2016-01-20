@@ -1,6 +1,6 @@
 Node Version Manager for Windows
 ================================
-nvmw is a simple Node Version Manager for Windows.
+forked from the original nvmw since it seems like pull requests were not being honored - [nvmw](//github.com/hakobera/nvmw "hakobera/nvmw") is a simple Node Version Manager for Windows. I've not tested my changes against io.js but in reality I'd say it is a non-issue now.
 
 Prerequisites
 -------------
@@ -15,7 +15,7 @@ Installation
 
 Clone this repository:
 
-    git clone git://github.com/hakobera/nvmw.git "%HOMEDRIVE%%HOMEPATH%\.nvmw"
+    git clone git://github.com/criticalmaas/nvmw.git "%HOMEDRIVE%%HOMEPATH%\.nvmw"
 
 To activate nvmw, add nvmw directory to your PATH environment variable
 
