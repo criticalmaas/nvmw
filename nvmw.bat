@@ -131,10 +131,24 @@ if %NODE_TYPE% == iojs (
     set NODE_EXE_URL=%NVMW_IOJS_ORG_MIRROR%/%NODE_VERSION%/win-x64/iojs.exe
   )
 ) else (
-  if %ARCH% == x32 (
-    set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/node.exe
+  :: if node version is less than version 4
+  EARLY_NODE_VERSION = FALSE
+  if %NODE_VERSION:~0,1% == 0 (
+    set EARLY_NODE_VERSION = TRUE
+  )
+  
+  if EARLY_NODE_VERSION = TRUE (
+    if %ARCH% == x32 (
+      set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/node.exe
+    ) else (
+      set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/x64/node.exe
+    )
   ) else (
-    set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/x64/node.exe
+    if %ARCH% == x32 (
+      set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/win-x86/node.exe
+    ) else (
+      set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/win-x64/node.exe
+    )  
   )
 )
 
